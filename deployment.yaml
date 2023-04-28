@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: docker-project
-          image: arnab/docker-project:v1
+          image: deepjoy/docker-project:v1
           ports:
             - containerPort: 8000
