@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: docker-project-deployment
+  labels:
+    app: docker-project
+spec:
+  selector:
+    matchLabels:
+      app: docker-project
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: docker-project
+    spec:
+      containers:
+        - name: docker-project
+          image: arnab/docker-project:v1
+          ports:
+            - containerPort: 8000
